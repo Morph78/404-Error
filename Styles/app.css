@@ -1,0 +1,224 @@
+html {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Jost";
+    background-color: #f0f9ff;
+}
+
+.nav {
+    padding: 30px 0;
+}
+
+.wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 150px;
+}
+
+.logo__img {
+    width: 100%;
+}
+.menu {
+    display: flex;
+    align-items: center;
+}
+
+.menu__item {
+    margin-left: 27px;
+}
+
+.menu__link {
+    text-decoration: none;
+    color: #1b0c46;
+    font-family: "Jost-Medium";
+    display: block;
+}
+
+.menu__link:hover:not(.menu__link-active) {
+    color: rgb(49, 6, 238);
+}
+
+.menu__link-active:hover {
+    color: rgb(37, 33, 33);
+}
+
+.menu__link-active {
+    background-color: #3b1c99;
+    color: #fff;
+    font-family: "Jost-Bold";
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 13px;
+    border-top-left-radius: 13px;
+    border-top-right-radius: 13px;
+    padding: 13px 13px;
+}
+
+.nav__icon {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+
+/*
+- App Styles 
+*/
+
+.container {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 15px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.main {
+    margin-top: 40px;
+}
+
+.page-content {
+    width: 50%;
+}
+.page-content__title {
+    color: #160b38;
+    font-family: "Jost-Bold";
+    font-size: 70px;
+    position: relative;
+}
+.page-content__title:before {
+    content: "";
+    position: absolute;
+    left: -22px;
+    top: -12px;
+    background: url(../images/Lines.svg) no-repeat;
+    width: 30px;
+    height: 30px;
+    background-size: 100%;
+}
+
+.page-content__caption {
+    color: #160b38;
+    font-family: "Jost-Medium";
+    font-size: 22px;
+    line-height: 34px;
+    margin-top: 15px;
+    margin-bottom: 25px;
+}
+.page-content__link {
+    background-color: #8054f6;
+    color: #fff;
+    font-family: "Jost-Bold";
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 13px;
+    border-top-left-radius: 13px;
+    border-top-right-radius: 13px;
+    padding: 11px 13px;
+    text-decoration: none;
+    display: block;
+    max-width: 146px;
+    text-align: center;
+}
+.page__banner {
+    width: 50%;
+}
+.page__image {
+    width: 100%;
+}
+
+/* 
+- App MediaQuery
+*/
+
+@media only screen and (max-width:1200px) {
+    .container {
+        max-width: 960px;
+    }
+}
+
+@media only screen and (max-width:992px) {
+    .container {
+        max-width: 720px;
+    }
+}
+
+@media only screen and (max-width:768px) {
+    .container {
+        max-width: 540px;
+    }
+    .nav__icon {
+        display: block;
+    }
+    .menu {
+        display: block;
+        position: fixed;
+        left: -270px;
+        top: 0;
+        bottom: 0;
+        background: #fff;
+        z-index: 20;
+        padding: 25px;
+        width: 220px;
+        transition: all ease 0.3s;
+    }
+    .main {
+        margin-top: 15px;
+    }
+
+    .menu__link {
+        padding: 9px;
+    }
+
+    .menu__link:hover:not(.menu__link-active) {
+        color: rgb(34, 34, 255);
+        transform: scale(1.05);
+
+    }
+
+    .menu__link-active:hover {
+        transform: scale(1.05);
+    }
+
+    .menu__link-active {
+        width: 90px;
+    }
+    .page-content {
+        order: 1;
+        width: 100%;
+       
+    }
+    .page__banner {
+        order: 0;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 15px;
+    }
+    .page__image {
+        max-width: 375px;
+    }
+
+}
+
+@media only screen and (max-width:576px) {
+    .container {
+        max-width: 100%;
+        padding: 0 30px;
+    }
+.page-content__title{
+    font-size: 54px;
+}   
+    
+.page-content__caption {
+    font-size: 20px;
+}
+}
